@@ -6,23 +6,95 @@
     <title>JS Maths</title>
 </head>
 <body>
-    <label for = "inputNumber1"> First number </label>
-    <input type="text" id="inputID1" name="inputNumber1"><br><br>
-    <label for = "inputNumber2"> Second number </label>
-    <input type="text" id="inputID2" name="inputNumber2"><br><br>
-    <button onclick="addTwoNumbers()">Add </button><br><br>
-    <p id="resultID"></p>
-    <script>
-        function addTwoNumbers(){
-           
-            // Get the values from the input fields
-            number1 = Number(document.getElementById("inputID1").value);
-            number2 = Number(document.getElementById("inputID2").value);
-            // Add the two numbers
-            result = number1 + number2;
-            // Display the result
-            document.getElementById("resultID").innerHTML = "Ans: " + result;
-        }
-    </script>
+
+<label for="inputNumber1"> First number </label>
+<input type="text" id="inputID1" name="inputNumber1"><br><br>
+
+<label for="inputNumber2"> Second number </label>
+<input type="text" id="inputID2" name="inputNumber2"><br><br>
+
+<button onclick="addTwoNumbers()">Add</button>
+<button onclick="subtractTwoNumbers()">Subtract</button>
+<button onclick="multiplyTwoNumbers()">Multiply</button>
+<button onclick="divideTwoNumbers()">Divide</button>
+
+<br><br>
+
+<p id="resultID"></p>
+
+<script>
+
+function addTwoNumbers(){
+    number1 = Number(document.getElementById("inputID1").value);
+    number2 = Number(document.getElementById("inputID2").value);
+    result = number1 + number2;
+    document.getElementById("resultID").innerHTML = "Ans: " + result;
+}
+
+function subtractTwoNumbers(){
+    number1 = Number(document.getElementById("inputID1").value);
+    number2 = Number(document.getElementById("inputID2").value);
+    result = number1 - number2;
+    document.getElementById("resultID").innerHTML = "Ans: " + result;
+}
+
+function multiplyTwoNumbers(){
+    number1 = Number(document.getElementById("inputID1").value);
+    number2 = Number(document.getElementById("inputID2").value);
+    result = number1 * number2;
+    document.getElementById("resultID").innerHTML = "Ans: " + result;
+}
+
+function divideTwoNumbers(){
+    number1 = Number(document.getElementById("inputID1").value);
+    number2 = Number(document.getElementById("inputID2").value);
+    result = number1 / number2;
+    document.getElementById("resultID").innerHTML = "Ans: " + result;
+}
+
+</script>
+
+<style>
+
+body{
+    font-family: Arial;
+    background-color: #f2f2f2;
+    text-align: center;
+    margin-top: 30px;
+}
+
+h1{
+    color: #333;
+}
+
+input{
+    padding: 8px;
+    font-size: 16px;
+    margin: 10px;
+    width: 130px;
+}
+
+button{
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 15px;
+    border: none;
+    background-color: rgb(123, 47, 194);
+    color: white;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(123, 47, 194);
+}
+
+#resultID{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+</style>
+
 </body>
 </html>
